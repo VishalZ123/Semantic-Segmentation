@@ -43,21 +43,19 @@ if uploaded_file is not None:
     st.subheader("Prediction using Original Model")
     if st.button("Predict", key=0):
         image = Image.open(uploaded_file)
-        st.image(image, width=300)
         with st.spinner("Predicting..."):
             predictions = predict(image, model)
-            st.image(predictions, width=300, clamp=True)
             # apply cmap to predictions to convert to RGB
-            predictions = plt.cm.hsv(predictions)
-            st.image(predictions, width=300, clamp=True)
-        
+            colormap = plt.cm.hsv(predictions)
+            # append image, predictions and colormap horizontally
+            st.image([image, predictions, colormap], width=200, clamp=True)
+
     st.subheader("Prediction using Improved Model")
     if st.button("Predict", key=1):
         image = Image.open(uploaded_file)
-        st.image(image, width=300)
         with st.spinner("Predicting..."):
             predictions = predict(image, model_improved)
-            st.image(predictions, width=300, clamp=True)
             # apply cmap to predictions to convert to RGB
-            predictions = plt.cm.hsv(predictions)
-            st.image(predictions, width=300, clamp=True)
+            colormap = plt.cm.hsv(predictions)
+            # append image, predictions and colormap horizontally
+            st.image([image, predictions, colormap], width=200, clamp=True)
