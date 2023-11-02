@@ -8,7 +8,7 @@ Semantic Segmentation on CityScape Dataset
 
 ## Dataset
 
-The dataset used for this project is the [CityScape Dataset](https://www.cityscapes-dataset.com/). The dataset contains 5000 images with pixel level annotations for 12 classes in ground truth. The dataset is divided into 2975 images for training, 500 images for validation.
+The dataset used for this project is the [CityScape Dataset](https://www.cityscapes-dataset.com/). The dataset contains 6950 images with pixel level annotations for 12 classes in ground truth. The dataset is divided into 2975 images for training, 500 images for validation.
 
 ## Results
 
